@@ -12,7 +12,7 @@
 </script>  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cómo funciona — Tu Rincón</title>
+<title>Tu Rincón — Las reglas del territorio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet">
 <style>
@@ -186,7 +186,7 @@ nav{
   font-size:0.7rem;margin-top:4px;flex-shrink:0;
 }
 
-/* EXIGENCIAS */
+/* EXIGENCIAS (ahora usada como bloque de ATENCIÓN) */
 .exigencias{
   background:var(--surface);border-left:3px solid var(--acento2);
   padding:48px 40px;margin-bottom:80px;
@@ -196,6 +196,18 @@ nav{
 .exigencias-label{
   font-size:10px;letter-spacing:0.4em;text-transform:uppercase;
   color:var(--acento2);margin-bottom:24px;font-weight:500;
+}
+
+/* REGLAS (nuevo bloque similar a exigencias) */
+.reglas{
+  background:var(--surface);border-left:3px solid var(--acento);
+  padding:48px 40px;margin-bottom:80px;
+  opacity:0;transform:translateY(40px);transition:opacity 0.7s ease,transform 0.7s ease;
+}
+.reglas.vis{opacity:1;transform:none}
+.reglas-label{
+  font-size:10px;letter-spacing:0.4em;text-transform:uppercase;
+  color:var(--acento);margin-bottom:24px;font-weight:500;
 }
 
 /* GRID STATS */
@@ -311,6 +323,7 @@ footer{
   .header,.main{padding-left:24px;padding-right:24px}
   .header{padding-top:120px;padding-bottom:60px}
   .exigencias{padding:32px 24px}
+  .reglas{padding:32px 24px}
   nav{padding:16px 24px}
   footer{padding:24px;flex-direction:column;gap:12px;text-align:center}
   .header-numero{font-size:40vw;right:-10px}
@@ -335,54 +348,81 @@ footer{
     Hablamos el<br><em>mismo idioma.</em>
   </h1>
   <p class="header-sub">
-    Aquí tienes todo lo que necesitas saber para empezar a construir tu rincón.<br>
-    <strong>Lee con atención. Lo que viene a continuación define si esto es para ti.</strong>
+    Esto no es para las que buscan dinero fácil.<br>
+    <strong>Es para las que entienden que construir algo propio cuesta.</strong>
   </p>
 </header>
 
 <main class="main">
 
-  <!-- PLATAFORMAS -->
+  <!-- ¿EN QUÉ CONSISTE? -->
   <div class="bloque">
-    <p class="seccion-label">Las herramientas del cobro</p>
-  </div>
-
-  <div class="plataformas">
-    <div class="plataforma">
-      <div class="plat-num">01</div>
-      <p class="plat-tag">Video — Solo Android</p>
-      <h2 class="plat-nombre">MAKO</h2>
-      <p class="plat-desc">Tu imagen es tu activo principal. Cobras por cada minuto de videollamada. El hombre paga para verte. Tú decides hasta dónde llega el espectáculo. Tú mandas.</p>
-      <div class="plat-datos">
-        <div class="dato">Retiras desde 20 USD</div>
-        <div class="dato">A mayor constancia, mayor nivel — tú subes el precio de tu minuto</div>
-        <div class="dato">Solo disponible en Android</div>
-      </div>
-    </div>
-    <div class="plataforma">
-      <div class="plat-num">02</div>
-      <p class="plat-tag">Chat y voz</p>
-      <h2 class="plat-nombre">FAMO</h2>
-      <p class="plat-desc">Para las que dominan a través de la palabra y el misterio. Cobras por cada mensaje que respondes y cada regalo que te envían. Tu voz y tu texto son el territorio.</p>
-      <div class="plat-datos">
-        <div class="dato">Retiras desde 10 USD — umbral de acceso más bajo</div>
-        <div class="dato">Más actividad: mejores clientes en tu bandeja</div>
-        <div class="dato">La plataforma te premia si mantienes el chat activo</div>
-      </div>
-    </div>
+    <p class="seccion-label">El contrato</p>
+    <p class="texto-cuerpo"><strong>Streaming privado. Hombres que pagan por acceder a ti.</strong></p>
+    <p class="texto-cuerpo">No es Tinder. No es gratis. Aquí el que quiere hablar, pide permiso primero.</p>
   </div>
 
   <div class="sep"><span class="sep-txt">I</span></div>
 
-  <!-- EXIGENCIAS -->
-  <div class="exigencias">
-    <p class="exigencias-label">Lo que exige esto — sin filtros</p>
-    <p class="texto-cuerpo"><strong>Mínimo 6 horas diarias de presencia, especialmente los primeros 3 días.</strong> No es negociable y no es arbitrario.</p>
-    <p class="texto-cuerpo">Las plataformas funcionan por algoritmo. Si no apareces, desapareces. Si apareces con constancia, el algoritmo te pone frente a los que más gastan.</p>
-    <p class="texto-cuerpo">Los primeros días son los más difíciles porque construyes desde cero. <strong>Las que pasan esa fase son las que luego no necesitan que nadie las motive.</strong></p>
+  <!-- ¿CÓMO SE GANA? + ¿CÓMO SE ACUMULA? -->
+  <div class="bloque">
+    <p class="seccion-label">El tributo</p>
+    <p class="texto-cuerpo"><strong>Por minuto de videollamada. Por regalos.</strong> Porque tu atención tiene precio y ellos lo saben.</p>
+    <p class="texto-cuerpo">Las monedas se convierten en dólares. Punto.</p>
+    <p class="texto-cuerpo" style="margin-top:32px"><strong>Extendiendo las llamadas.</strong> Mientras más tiempo te quieran escuchar, más tributo recibes.</p>
+    <p class="texto-cuerpo">La app no te regala nada. Te paga porque los hombres pagan por estar contigo.</p>
   </div>
 
-  <!-- STATS -->
+  <div class="sep"><span class="sep-txt">II</span></div>
+
+  <!-- ¿QUÉ SE HACE EN LAS LLAMADAS? -->
+  <div class="bloque">
+    <p class="seccion-label">El territorio</p>
+    <p class="texto-cuerpo">Hablar. Escuchar. Reír. O lo que tú decidas.</p>
+    <p class="texto-cuerpo">Hay hombres que solo quieren compañía. Hay otros que se pasan.</p>
+    <p class="texto-cuerpo"><strong>¿Y qué haces con los que se pasan?</strong></p>
+    <p class="texto-cuerpo">Los bloqueas. En un segundo. Él perdió su dinero. Tú no perdiste nada.</p>
+    <p class="texto-cuerpo"><strong>Eso pasa cuando tú pones las reglas.</strong></p>
+  </div>
+
+  <div class="sep"><span class="sep-txt">III</span></div>
+
+  <!-- ¿CADA CUÁNTO SE TRABAJA? -->
+  <div class="bloque">
+    <p class="seccion-label">La constancia</p>
+    <p class="texto-cuerpo">Las 24 horas. Los 7 días. Pero <strong>tú eliges tu horario.</strong></p>
+    <p class="texto-cuerpo">Nadie te vigila. Nadie te controla. Solo el mercado: si no estás, no cobras.</p>
+  </div>
+
+  <div class="sep"><span class="sep-txt">IV</span></div>
+
+  <!-- ATENCIÓN (filtro duro) -->
+  <div class="exigencias">
+    <p class="exigencias-label">Atención — sin filtros</p>
+    <p class="texto-cuerpo"><strong>Esto no es para las que quieren dinero fácil.</strong></p>
+    <p class="texto-cuerpo">Es para las que entienden que construir algo propio cuesta.</p>
+    <p class="texto-cuerpo">Hay hombres explícitos. Hay competencia. Hay días malos.</p>
+    <p class="texto-cuerpo"><strong>¿Te asustas? Entonces esto no es tuyo.</strong></p>
+    <p class="texto-cuerpo"><strong>¿Lo enfrentas? Bienvenida al territorio.</strong></p>
+  </div>
+
+  <div class="sep"><span class="sep-txt">V</span></div>
+
+  <!-- LAS REGLAS QUE NADIE TE CUENTA -->
+  <div class="reglas">
+    <p class="reglas-label">Las reglas que nadie te cuenta</p>
+    <p class="texto-cuerpo"><strong>Primera regla:</strong> Los primeros 3 días definen todo.</p>
+    <p class="texto-cuerpo">La app te observa. Si no estás, tu perfil desaparece. No es castigo. Es selección natural.</p>
+    <p class="texto-cuerpo"><strong>Las que se quedan son las que la plataforma lleva al frente.</strong></p>
+    <p class="texto-cuerpo" style="margin-top:32px"><strong>Segunda regla:</strong> 6 horas diarias. Mínimo.</p>
+    <p class="texto-cuerpo">Puedes partirlas como quieras. Pero si no pones el tiempo, no hay tributo.</p>
+    <p class="texto-cuerpo"><strong>Esto es ley de causa y efecto. No hay atajos.</strong></p>
+    <p class="texto-cuerpo" style="margin-top:32px"><strong>Tercera regla:</strong> Tú mandas.</p>
+    <p class="texto-cuerpo">No estás obligada a nada. Tú decides qué muestras, hasta dónde llegas, cuándo te conectas.</p>
+    <p class="texto-cuerpo"><strong>Pero el que no trabaja, no come. Así de simple.</strong></p>
+  </div>
+
+  <!-- STATS (refuerzo numérico) -->
   <div class="stats">
     <div class="stat">
       <div class="stat-num">6<span>h</span></div>
@@ -402,51 +442,85 @@ footer{
     </div>
   </div>
 
-  <div class="sep"><span class="sep-txt">II</span></div>
+  <div class="sep"><span class="sep-txt">VI</span></div>
 
-  <!-- REQUISITOS -->
+  <!-- LAS APPS -->
   <div class="bloque">
-    <p class="seccion-label">Requisitos de entrada</p>
-    <div class="plataformas" style="margin-bottom:0">
-      <div class="plataforma">
-        <p class="plat-tag">Obligatorio</p>
-        <p class="plat-nombre" style="font-size:1.1rem;margin-bottom:10px">Mayoría de edad legal</p>
-        <p class="plat-desc" style="margin-bottom:0">Sin documentos no hay trato. Punto.</p>
+    <p class="seccion-label">Las herramientas del cobro</p>
+  </div>
+
+  <div class="plataformas">
+    <div class="plataforma">
+      <div class="plat-num">01</div>
+      <p class="plat-tag">Video — Solo Android</p>
+      <h2 class="plat-nombre">MAKO APP</h2>
+      <p class="plat-desc">Videollamadas privadas. Match pagos. Flujo constante de llamadas.<br>Subes de nivel → subes el precio de tu minuto. Ellos pagan más por tenerte.</p>
+      <div class="plat-datos">
+        <div class="dato">100 créditos = 1 USD</div>
+        <div class="dato">Retiro desde 20 USD</div>
+        <div class="dato">Comisión por retiro: 1 USD (la app cobra su peaje)</div>
+        <div class="dato">Pagos: PayPal, USDT (Binance), Pago Móvil</div>
       </div>
-      <div class="plataforma">
-        <p class="plat-tag">Técnico</p>
-        <p class="plat-nombre" style="font-size:1.1rem;margin-bottom:10px">Dispositivo y conexión</p>
-        <p class="plat-desc" style="margin-bottom:0">Teléfono con cámara funcional y WiFi estable. No hay excusas técnicas.</p>
-      </div>
-      <div class="plataforma">
-        <p class="plat-tag">Lo más importante</p>
-        <p class="plat-nombre" style="font-size:1.1rem;margin-bottom:10px">Compromiso real</p>
-        <p class="plat-desc" style="margin-bottom:0">No buscamos a las que lo intentan. Buscamos a las que ejecutan.</p>
+    </div>
+    <div class="plataforma">
+      <div class="plat-num">02</div>
+      <p class="plat-tag">Chat y voz</p>
+      <h2 class="plat-nombre">FAMO APP</h2>
+      <p class="plat-desc">Para las que dominan la palabra.<br>Cobras por mensaje, por regalo, por sala de voz. Si no quieres mostrar nada, esta es tu vía.</p>
+      <div class="plat-datos">
+        <div class="dato">3.125 diamantes = 1 USD</div>
+        <div class="dato">Retiro desde 10 USD (31.250 diamantes)</div>
+        <div class="dato">Mensajes solo es más lento. Si quieres acelerar, activas video</div>
+        <div class="dato">Pagos: Binance, Volet</div>
       </div>
     </div>
   </div>
 
-  <div class="sep"><span class="sep-txt">III</span></div>
+  <div class="sep"><span class="sep-txt">VII</span></div>
 
-  <!-- NOSOTROS -->
+  <!-- REQUISITOS -->
+  <div class="bloque">
+    <p class="seccion-label">Requisitos (los que importan)</p>
+    <div class="plataformas" style="margin-bottom:0">
+      <div class="plataforma">
+        <p class="plat-tag">Legal</p>
+        <p class="plat-nombre" style="font-size:1.1rem;margin-bottom:10px">Mayor de 18 años</p>
+        <p class="plat-desc" style="margin-bottom:0">Sin documentos no hay trato. Punto.</p>
+      </div>
+      <div class="plataforma">
+        <p class="plat-tag">Técnico</p>
+        <p class="plat-nombre" style="font-size:1.1rem;margin-bottom:10px">Wifi estable + cámara</p>
+        <p class="plat-desc" style="margin-bottom:0">Si se corta, se corta tu ingreso. Cámara que te haga justicia.</p>
+      </div>
+      <div class="plataforma">
+        <p class="plat-tag">Actitud</p>
+        <p class="plat-nombre" style="font-size:1.1rem;margin-bottom:10px">Compromiso real</p>
+        <p class="plat-desc" style="margin-bottom:0">No "voy a intentar". Compromiso o nada.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sep"><span class="sep-txt">VIII</span></div>
+
+  <!-- QUÉ OFRECEMOS -->
   <div class="nosotros">
     <p class="seccion-label">Lo que ponemos nosotros</p>
     <div class="nosotros-grid">
       <div class="nos-item">
         <strong>Capacitación</strong>
-        Completa antes de que abras tu perfil. No llegas sola.
+        Para que aprendas el terreno antes de abrir tu perfil.
       </div>
       <div class="nos-item">
         <strong>Soporte directo</strong>
-        Mientras construyes tu rincón, tenemos acompañamiento.
+        Grupo de WhatsApp con las que ya están en el ruedo.
       </div>
       <div class="nos-item">
         <strong>Gestión de cobros</strong>
-        Sin intermediarios innecesarios. El dinero llega a tus manos.
+        Ayuda con retiros: PayPal, Binance, lo que necesites.
       </div>
       <div class="nos-item">
-        <strong>Los primeros días</strong>
-        Acompañamiento en la fase que lo define todo.
+        <strong>Bonificaciones</strong>
+        Si rindes, te premiamos. Dinámicas grupales.
       </div>
     </div>
   </div>
@@ -455,11 +529,13 @@ footer{
     <span class="cobro">Binance</span>
     <span class="cobro">PayPal</span>
     <span class="cobro">Pago Móvil</span>
+    <span class="cobro">USDT</span>
+    <span class="cobro">Volet</span>
   </div>
 
-  <div class="sep"><span class="sep-txt">IV</span></div>
+  <div class="sep"><span class="sep-txt">IX</span></div>
 
-  <!-- CTA WHATSAPP -->
+  <!-- CTA WHATSAPP (EXACTAMENTE IGUAL QUE EL ORIGINAL) -->
   <div class="cta-final">
     <p class="cta-pre">El siguiente paso</p>
     <h2 class="cta-titulo">Una conversación<br>de <em>diez minutos.</em></h2>
@@ -470,9 +546,9 @@ footer{
     </p>
 
     <a href="https://wa.me/584129460447?text=Estoy%20lista.%20Vi%20la%20informaci%C3%B3n%20y%20quiero%20saber%20c%C3%B3mo%20empezar." 
-   target="_blank" 
-   class="btn-wa" 
-   onclick="gtag('event', 'contacto_whatsapp', {'valor': 'interes_inicio'});">
+       target="_blank" 
+       class="btn-wa" 
+       onclick="gtag('event', 'contacto_whatsapp', {'valor': 'interes_inicio'});">
       <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
       </svg>
@@ -499,7 +575,7 @@ footer{
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})
 },{threshold:0.1});
-document.querySelectorAll('.bloque,.sep,.plataformas,.exigencias,.stats,.nosotros,.cobros,.cta-final').forEach(el=>obs.observe(el));
+document.querySelectorAll('.bloque,.sep,.plataformas,.exigencias,.reglas,.stats,.nosotros,.cobros,.cta-final').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
