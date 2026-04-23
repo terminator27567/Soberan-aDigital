@@ -198,7 +198,7 @@ nav{
   color:var(--acento2);margin-bottom:24px;font-weight:500;
 }
 
-/* REGLAS (nuevo bloque similar a exigencias) */
+/* REGLAS */
 .reglas{
   background:var(--surface);border-left:3px solid var(--acento);
   padding:48px 40px;margin-bottom:80px;
@@ -213,7 +213,7 @@ nav{
 /* GRID STATS */
 .stats{
   display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-  gap:2px;margin-bottom:80px;
+  gap:2px;margin-bottom:40px;
   opacity:0;transform:translateY(40px);transition:opacity 0.7s ease,transform 0.7s ease;
 }
 .stats.vis{opacity:1;transform:none}
@@ -225,6 +225,83 @@ nav{
 }
 .stat-num span{color:var(--acento)}
 .stat-desc{font-size:11px;letter-spacing:0.1em;color:var(--gris);text-transform:uppercase}
+
+/* NUEVO: explicación debajo de los números */
+.stats-explicacion{
+  text-align:center;
+  font-size:0.85rem;
+  color:var(--gris2);
+  margin-bottom:80px;
+  letter-spacing:0.05em;
+  border-bottom:1px solid var(--surface2);
+  padding-bottom:32px;
+}
+.stats-explicacion strong{
+  color:var(--acento);
+  font-weight:500;
+}
+
+/* POTENCIAL DE GANANCIA */
+.potencial{
+  background:linear-gradient(135deg, var(--surface) 0%, #0a0a0a 100%);
+  padding:48px 40px;
+  margin-bottom:80px;
+  border:1px solid var(--surface2);
+  position:relative;
+  overflow:hidden;
+}
+.potencial::before{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  width:200px;
+  height:200px;
+  background:radial-gradient(circle, rgba(232,255,71,0.03) 0%, transparent 70%);
+  pointer-events:none;
+}
+.potencial-label{
+  font-size:10px;letter-spacing:0.4em;text-transform:uppercase;
+  color:var(--acento);margin-bottom:24px;font-weight:500;
+}
+.potencial-titulo{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(1.4rem,2.5vw,2rem);
+  font-weight:700;
+  color:var(--blanco);
+  margin-bottom:20px;
+  line-height:1.3;
+}
+.potencial-titulo em{
+  font-style:italic;
+  color:var(--acento);
+}
+.potencial-cifra{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:700;
+  color:var(--acento);
+  margin:24px 0 16px;
+  line-height:1;
+}
+.potencial-texto{
+  font-size:0.95rem;
+  line-height:1.7;
+  color:var(--gris);
+  margin-bottom:20px;
+}
+.potencial-texto strong{
+  color:var(--blanco);
+  font-weight:500;
+}
+.potencial-aviso{
+  font-size:0.8rem;
+  color:var(--gris2);
+  border-top:1px solid var(--surface2);
+  padding-top:20px;
+  margin-top:20px;
+  font-style:italic;
+}
 
 /* NOSOTROS */
 .nosotros{
@@ -324,6 +401,7 @@ footer{
   .header{padding-top:120px;padding-bottom:60px}
   .exigencias{padding:32px 24px}
   .reglas{padding:32px 24px}
+  .potencial{padding:32px 24px}
   nav{padding:16px 24px}
   footer{padding:24px;flex-direction:column;gap:12px;text-align:center}
   .header-numero{font-size:40vw;right:-10px}
@@ -422,7 +500,7 @@ footer{
     <p class="texto-cuerpo"><strong>Pero el que no trabaja, no come. Así de simple.</strong></p>
   </div>
 
-  <!-- STATS (refuerzo numérico) -->
+  <!-- STATS (mínimos para cobrar) -->
   <div class="stats">
     <div class="stat">
       <div class="stat-num">6<span>h</span></div>
@@ -434,12 +512,45 @@ footer{
     </div>
     <div class="stat">
       <div class="stat-num">10<span>$</span></div>
-      <div class="stat-desc">Primer retiro FAMO</div>
+      <div class="stat-desc">Mínimo FAMO</div>
     </div>
     <div class="stat">
       <div class="stat-num">20<span>$</span></div>
-      <div class="stat-desc">Primer retiro MAKO</div>
+      <div class="stat-desc">Mínimo MAKO</div>
     </div>
+  </div>
+
+  <!-- Explicación corta debajo de los números -->
+  <div class="stats-explicacion">
+    <strong>10$ y 20$</strong> son los mínimos para hacer tu primer retiro.<br>
+    No es lo máximo que puedes ganar. Es la puerta de entrada.
+  </div>
+
+  <!-- POTENCIAL DE GANANCIA (el nuevo bloque que pediste) -->
+  <div class="potencial">
+    <p class="potencial-label">El techo lo pones tú</p>
+    <h2 class="potencial-titulo">
+      ¿Quieres <em>más</em>?
+    </h2>
+    <p class="potencial-texto">
+      Con 6 horas y constancia, muchas chicas están en <strong>500-800$ al mes</strong>.
+    </p>
+    <div class="potencial-cifra">1500$ — 1800$</div>
+    <p class="potencial-texto">
+      <strong>Eso es lo que ganan las que llegan más lejos.</strong>
+    </p>
+    <p class="potencial-texto">
+      ¿El precio? Más horas. Más dedicación. Contenido más explícito.<br>
+      Shows más atrevidos. Menos límites.
+    </p>
+    <p class="potencial-texto">
+      <strong>No es para todas. Y está bien.</strong> Tú decides hasta dónde quieres llegar.<br>
+      Algunas prefieren quedarse en la zona de 500$. Otras quieren facturar como las top.
+    </p>
+    <p class="potencial-aviso">
+      No hay promesas falsas. El dinero no cae del cielo.<br>
+      Pero si pones el trabajo, la plataforma te paga. Así de simple.
+    </p>
   </div>
 
   <div class="sep"><span class="sep-txt">VI</span></div>
@@ -535,7 +646,7 @@ footer{
 
   <div class="sep"><span class="sep-txt">IX</span></div>
 
-  <!-- CTA WHATSAPP (EXACTAMENTE IGUAL QUE EL ORIGINAL) -->
+  <!-- CTA WHATSAPP (EXACTAMENTE IGUAL) -->
   <div class="cta-final">
     <p class="cta-pre">El siguiente paso</p>
     <h2 class="cta-titulo">Una conversación<br>de <em>diez minutos.</em></h2>
@@ -575,7 +686,7 @@ footer{
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})
 },{threshold:0.1});
-document.querySelectorAll('.bloque,.sep,.plataformas,.exigencias,.reglas,.stats,.nosotros,.cobros,.cta-final').forEach(el=>obs.observe(el));
+document.querySelectorAll('.bloque,.sep,.plataformas,.exigencias,.reglas,.stats,.potencial,.nosotros,.cobros,.cta-final').forEach(el=>obs.observe(el));
 </script>
 </body>
 </html>
